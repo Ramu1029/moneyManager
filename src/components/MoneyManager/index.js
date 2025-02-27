@@ -62,7 +62,7 @@ class MoneyManager extends Component {
     let income = 0
     transactionList.forEach(eachTransaction => {
       if (eachTransaction.type === 'INCOME') {
-        income = income + eachTransaction.amount
+        income += eachTransaction.amount
       }
     })
     return income
@@ -112,8 +112,12 @@ class MoneyManager extends Component {
   }
 
   render() {
-    const {transactionList, inputAmountVal, inputAmtType, inputTitleVal} =
-      this.state
+    const {
+      transactionList,
+      inputAmountVal,
+      inputAmtType,
+      inputTitleVal,
+    } = this.state
 
     const balanceAmount = this.getBalanceAmount()
     const expensesAmount = this.getExpenses()
@@ -208,7 +212,6 @@ class MoneyManager extends Component {
                 <p className="column">Title</p>
                 <p className="column">Amount</p>
                 <p className="column">Type</p>
-                <p className="column"></p>
               </li>
               {transactionList.length > 0
                 ? transactionList.map(eachItem => (
