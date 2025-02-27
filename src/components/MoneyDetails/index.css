@@ -1,0 +1,47 @@
+/* Write your CSS here */
+
+.account-types-container {
+  display: flex;
+  margin-top: 25px;
+  gap: 30px;
+}
+.account-card-container {
+  min-height: 110px;
+  max-height: 180px;
+  width: 28%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 14px;
+  flex-grow: 1;
+}
+.balance-card {
+  background-color: #ecfccb;
+  border: 1px solid;
+}
+.income-card {
+  background-color: #cffafe;
+  border: 1px solid;
+}
+.expenses-card {
+  background-color: #ede9fe;
+  border: 1px solid;
+}
+.account-type-img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+.card-description {
+  margin-top: 0;
+}
+.account-type {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #475569;
+}
+.balance {
+  font-family: 'Roboto';
+  font-size: 25px;
+  color: #334155;
+}

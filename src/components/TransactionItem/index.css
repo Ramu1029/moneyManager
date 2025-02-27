@@ -1,0 +1,32 @@
+/* Write your CSS here */
+* {
+  box-sizing: border-box;
+}
+.transaction-row {
+  display: flex;
+  min-height: 40px;
+  max-height: 50px;
+  align-items: center;
+  border: 2px solid #cbd5e1;
+  border-top-style: none;
+  width: 100%;
+}
+.record {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: bold;
+  color: #7e858e;
+  margin-left: 25px;
+  width: 25%;
+}
+.delete-btn {
+  height: 26px;
+  width: 38px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.delete-icon {
+  height: 100%;
+  width: 100%;
+}
