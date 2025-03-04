@@ -183,7 +183,7 @@ class MoneyManager extends Component {
               </label>
               <br />
               <select
-                id="typeInput"
+                id="transactionTypeInput"
                 className="form-input"
                 value={inputAmtType}
                 onChange={this.onAmountTypeChange}

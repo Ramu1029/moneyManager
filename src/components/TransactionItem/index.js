@@ -9,7 +9,7 @@ const TransactionItem = props => {
   return (
     <li className="transaction-row">
       <p className="record">{title}</p>
-      <p className="record">{amount}</p>
+      <p className="record">Rs {amount}</p>
       <p className="record">{type}</p>
       <button
         className="delete-btn"
