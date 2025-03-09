@@ -111,6 +111,25 @@
   color: #475569;
   margin-left: 25px;
   width: 25%;
-  flex-wrap: 1;
   flex-shrink: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .transaction-details-container {
+    flex-direction: column;
+  }
+  .transaction-history-container {
+    padding-top: 15px;
+    padding-left: 16px;
+    padding-right: 18px;
+    padding-bottom: 15px;
+  }
+  .column {
+    font-size: 13px;
+    flex-shrink: 1;
+    margin-left: 10px;
+  }
+  .form-input {
+    width: 100%;
+  }
 }

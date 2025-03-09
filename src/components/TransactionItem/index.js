@@ -13,6 +13,7 @@ const TransactionItem = props => {
       <p className="record">{type}</p>
       <button
         className="delete-btn"
+        type="button"
         onClick={onDeleteTransaction}
         data-testid="delete"
       >
