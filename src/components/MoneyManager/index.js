@@ -92,7 +92,7 @@ class MoneyManager extends Component {
       const newTransaction = {
         transactionId: uuidv4(),
         title: inputTitleVal,
-        amount: parseInt(inputAmountVal),
+        amount: parseFloat(inputAmountVal),
         type: displayText,
       }
 
@@ -106,20 +106,18 @@ class MoneyManager extends Component {
   }
 
   deleteTransactionDetails = id => {
-    const {transactionList} = this.state
-    const filteredTransactionList = transactionList.filter(
-      eachTransaction => eachTransaction.transactionId !== id,
-    )
-    this.setState({
-      transactionList: filteredTransactionList,
-    })
+    this.setState(prevState => ({
+      transactionList: prevState.transactionList.filter(
+        eachTransaction => eachTransaction.transactionId !== id,
+      ),
+    }))
   }
 
   render() {
     const {
       transactionList,
       inputAmountVal,
-      inputAmtType,
+      inputAmountTypeId,
       inputTitleVal,
     } = this.state
 
@@ -189,7 +187,7 @@ class MoneyManager extends Component {
               <select
                 id="transactionTypeInput"
                 className="form-input"
-                value={inputAmtType}
+                value={inputAmountTypeId}
                 onChange={this.onAmountTypeChange}
                 required
               >
