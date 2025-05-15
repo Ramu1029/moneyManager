@@ -106,11 +106,13 @@ class MoneyManager extends Component {
   }
 
   deleteTransactionDetails = id => {
-    this.setState(prevState => ({
-      transactionList: prevState.transactionList.filter(
+    const {transactionList}=this.state
+    const updatedTransactonList=transactionList.filter(
         eachTransaction => eachTransaction.transactionId !== id,
-      ),
-    }))
+    ),
+      this.setState({
+        transactionList: updatedTransactonList,
+    })
   }
 
   render() {
@@ -169,7 +171,7 @@ class MoneyManager extends Component {
               </label>
               <br />
               <input
-                type="number"
+                type="text"
                 className="form-input"
                 id="amountInput"
                 value={inputAmountVal}
