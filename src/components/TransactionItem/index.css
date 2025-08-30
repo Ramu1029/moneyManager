@@ -19,12 +19,13 @@
   margin-left: 25px;
   width: 25%;
 }
-.delete-btn {
+.delete-record-btn {
   height: 26px;
   width: 38px;
   background-color: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .delete-icon {
   height: 100%;

@@ -105,9 +105,15 @@ class MoneyManager extends Component {
     }
   }
 
+<<<<<<< HEAD
   deleteTransactionDetails = id => {
     const {transactionList}=this.state
     const updatedTransactonList=transactionList.filter(
+=======
+  deleteTransactionRecord = id => {
+    this.setState(prevState => ({
+      transactionList: prevState.transactionList.filter(
+>>>>>>> updated code
         eachTransaction => eachTransaction.transactionId !== id,
     ),
       this.setState({
@@ -220,9 +226,9 @@ class MoneyManager extends Component {
               {transactionList.length > 0
                 ? transactionList.map(eachItem => (
                     <TransactionItem
-                      transactionObj={eachItem}
+                      transactionDetails={eachItem}
                       key={eachItem.transactionId}
-                      deleteTransactionDetails={this.deleteTransactionDetails}
+                      deleteTransactionRecord={this.deleteTransactionRecord}
                     />
                   ))
                 : ''}
